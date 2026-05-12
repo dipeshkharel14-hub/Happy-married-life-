@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>भवानी & नवराज — विवाह उत्सव</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#C9A84C;--gl:#E8C97A;--gp:#F5E6C0;
+  --ma:#7B1D30;--md:#3D0F1A;--ml:#A83050;
+  --ch:#F2E6CC;--bk:#060305;--bk2:#0D0609;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bk);color:var(--ch);font-family:'Noto Serif Devanagari',serif;overflow-x:hidden;cursor:none;}
+#CR{width:10px;height:10px;background:var(--g);border-radius:50%;position:fixed;z-index:9999;pointer-events:none;mix-blend-mode:screen;transition:transform .12s;}
+#CR2{width:32px;height:32px;border:1px solid rgba(201,168,76,.32);border-radius:50%;position:fixed;z-index:9998;pointer-events:none;transition:all .2s cubic-bezier(.25,.46,.45,.94);}
+/* ── LOADER ── */
+#LDR{position:fixed;inset:0;background:var(--bk);z-index:9997;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1.5s,visibility 1.5s;}
+#LDR.out{opacity:0;visibility:hidden;pointer-events:none;}
+.lring{position:absolute;border-radius:50%;border:1px solid transparent;}
+.lw{position:relative;width:110px;height:110px;display:flex;align-items:center;justify-content:center;}
+.lr1{inset:0;border-top-color:var(--g);animation:sp 1.8s linear infinite;}
+.lr2{inset:15px;border-right-color:rgba(201,168,76,.4);animation:sp 2.5s linear infinite reverse;}
+.lr3{inset:28px;border-bottom-color:rgba(201,168,76,.18);animation:sp 3.2s linear infinite;}
+.lhrt{font-size:1.8rem;animation:hb 1.2s ease-in-out infinite;}
+.ltxt{margin-top:1.6rem;text-align:center;}
+.lt1{font-family:'Noto Sans Devanagari',sans-serif;font-size:.62rem;letter-spacing:.55em;color:var(--g);opacity:0;animation:fU .8s 1s ease forwards;}
+.lt2{font-size:.95rem;letter-spacing:.18em;color:var(--ch);opacity:0;animation:fU .8s 1.3s ease forwards;margin-top:.3rem;}
+/* ── CANVAS BG ── */
+#PC{position:fixed;inset:0;pointer-events:none;z-index:0;}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s;}
+nav.sc{background:rgba(6,3,5,.9);backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,168,76,.07);}
+.nb{font-size:.68rem;letter-spacing:.4em;color:var(--g);opacity:.85;font-family:'Noto Sans Devanagari',sans-serif;}
+.nl{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nl a{font-family:'Noto Sans Devanagari',sans-serif;font-size:.68rem;letter-spacing:.14em;color:rgba(242,230,204,.42);text-decoration:none;transition:color .3s;}
+.nl a:hover{color:var(--g);}
+.nav-cta{padding:.45rem 1.1rem;border:1px solid rgba(201,168,76,.4);color:var(--gl)!important;transition:all .4s!important;}
+.nav-cta:hover{background:rgba(201,168,76,.08)!important;border-color:var(--g)!important;}
+@media(max-width:700px){.nl{display:none;}}
+/* ── SHARED ── */
+.sec{position:relative;z-index:1;}
+.inn{max-width:1120px;margin:0 auto;padding:0 2rem;}
+.eye{font-family:'Noto Sans Devanagari',sans-serif;font-size:.6rem;letter-spacing:.55em;color:var(--g);opacity:.6;text-align:center;margin-bottom:.7rem;}
+.stit{font-size:clamp(1.75rem,3.8vw,2.9rem);font-weight:300;color:var(--ch);text-align:center;line-height:1.25;margin-bottom:.7rem;}
+.ssub{font-size:.9rem;font-style:italic;color:rgba(242,230,204,.4);text-align:center;max-width:500px;margin:0 auto 3.5rem;line-height:1.95;}
+.gline{height:1px;background:linear-gradient(90deg,transparent,var(--g),transparent);opacity:.2;margin:1.5rem 0;}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.25,.46,.45,.94),transform .85s cubic-bezier(.25,.46,.45,.94);}
+.rv.vs{opacity:1;transform:none;}
+/* ── ANIMATIONS ── */
+@keyframes sp{to{transform:rotate(360deg);}}
+@keyframes hb{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
+@keyframes fU{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+@keyframes fD{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:none;}}
+@keyframes fI{from{opacity:0;}to{opacity:1;}}
+@keyframes SHN{to{background-position:200% center;}}
+@keyframes PF{0%{opacity:0;transform:translateY(-10px) rotate(0);}8%{opacity:.4;}85%{opacity:.18;}100%{opacity:0;transform:translateY(100vh) rotate(560deg) translateX(20px);}}
+@keyframes rR{to{transform:rotate(360deg);}}
+@keyframes pulse{0%,100%{opacity:.6;transform:scale(1);}50%{opacity:1;transform:scale(1.06);}}
+
+/* ════════════════════════════════════
+   HERO
+════════════════════════════════════ */
+#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.hbg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 85% 60% at 50% 22%,rgba(123,29,48,.28) 0%,transparent 68%),
+  radial-gradient(ellipse 50% 40% at 10% 82%,rgba(201,168,76,.06) 0%,transparent 55%),
+  linear-gradient(180deg,#030202 0%,#060305 40%,#0D0609 100%);}
+.o1{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(123,29,48,.1),transparent 65%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:oF 9s ease-in-out infinite alternate;}
+.o2{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.06),transparent 65%);border-radius:50%;top:20%;left:68%;animation:oF 13s ease-in-out infinite alternate-reverse;}
+@keyframes oF{to{transform:translate(16px,-16px) scale(1.09);}}
+
+/* Photo frame */
+.hfw{position:relative;width:190px;height:190px;margin:0 auto 2.5rem;opacity:0;animation:fU 1.2s .3s ease forwards;}
+.hfr{width:190px;height:190px;border-radius:50%;overflow:hidden;border:1px solid rgba(201,168,76,.25);}
+.hph{width:100%;height:100%;background:radial-gradient(circle at 40% 35%,rgba(123,29,48,.5),rgba(61,15,26,.82) 55%,rgba(6,3,5,.96));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;}
+.hini{font-size:2.6rem;font-weight:300;color:var(--g);text-shadow:0 0 30px rgba(201,168,76,.35);}
+.hplb{font-size:.5rem;letter-spacing:.28em;color:rgba(201,168,76,.28);}
+.hr1{position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(201,168,76,.12);animation:rR 22s linear infinite;}
+.hr2{position:absolute;inset:-24px;border-radius:50%;border:1px solid rgba(201,168,76,.06);animation:rR 34s linear infinite reverse;}
+.hrd{position:absolute;width:6px;height:6px;background:var(--g);border-radius:50%;top:-3px;left:50%;transform:translateX(-50%);box-shadow:0 0 12px var(--g);}
+.hgt{position:absolute;top:-16px;right:-14px;background:linear-gradient(135deg,var(--ma),var(--md));border:1px solid rgba(201,168,76,.35);padding:.28rem .7rem;font-family:'Noto Sans Devanagari',sans-serif;font-size:.56rem;letter-spacing:.2em;color:var(--gl);animation:tF 3s ease-in-out infinite alternate;}
+@keyframes tF{0%{transform:rotate(-3deg);}100%{transform:rotate(2deg) translateY(-4px);}}
+
+.hcnt{position:relative;z-index:2;text-align:center;padding:0 1rem;}
+.hsan{font-family:'Noto Sans Devanagari',sans-serif;font-size:.64rem;letter-spacing:.55em;color:var(--g);opacity:0;animation:fD .9s .85s ease forwards;}
+.hnm{font-size:clamp(2.4rem,6.8vw,5.4rem);font-weight:300;color:var(--ch);line-height:1.07;letter-spacing:.03em;opacity:0;animation:fU 1.2s .62s ease forwards;text-shadow:0 0 80px rgba(201,168,76,.16);}
+.hamp{color:var(--g);font-style:italic;display:block;font-size:.58em;margin:.08em 0;}
+.hdiv{display:flex;align-items:center;gap:.9rem;margin:1.6rem auto;width:fit-content;opacity:0;animation:fI .9s 1.2s ease forwards;}
+.hdl{width:50px;height:1px;background:linear-gradient(90deg,transparent,var(--g));}
+.hdl.r{background:linear-gradient(90deg,var(--g),transparent);}
+.hdate{font-family:'Noto Sans Devanagari',sans-serif;font-size:.65rem;letter-spacing:.3em;color:rgba(201,168,76,.55);opacity:0;animation:fU .9s 1.4s ease forwards;margin-bottom:2rem;}
+
+/* HERO BUTTONS */
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;opacity:0;animation:fU 1s 1.6s ease forwards;}
+.hbtn{display:inline-flex;align-items:center;gap:.6rem;padding:.88rem 2rem;font-family:'Noto Serif Devanagari',serif;font-size:.85rem;letter-spacing:.15em;cursor:pointer;text-decoration:none;transition:all .4s;position:relative;overflow:hidden;}
+.hbtn-p{border:1px solid rgba(201,168,76,.5);background:rgba(201,168,76,.06);color:var(--gl);backdrop-filter:blur(12px);}
+.hbtn-p:hover{border-color:var(--g);color:var(--g);transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,168,76,.07);}
+.hbtn-s{border:1px solid rgba(242,230,204,.12);background:transparent;color:rgba(242,230,204,.5);}
+.hbtn-s:hover{border-color:rgba(242,230,204,.3);color:var(--ch);}
+.scd{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.32rem;opacity:0;animation:fI 1s 2.5s ease forwards;}
+.sdt{width:4px;height:4px;background:var(--g);border-radius:50%;animation:sB 1.9s ease-in-out infinite;}
+.sdt:nth-child(2){animation-delay:.2s;opacity:.5;}
+.sdt:nth-child(3){animation-delay:.4s;opacity:.2;}
+@keyframes sB{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+
+/* ════════════════════════════════════
+   HAPPY MARRIED LIFE — HERO BAND
+════════════════════════════════════ */
+#hmr{padding:5rem 2rem;position:relative;overflow:hidden;background:
+  radial-gradient(ellipse at 50% 50%,rgba(123,29,48,.18) 0%,transparent 65%),var(--bk2);}
+#fwc{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.hmcnt{text-align:center;position:relative;z-index:2;}
+.hmpre{font-family:'Noto Sans Devanagari',sans-serif;font-size:.62rem;letter-spacing:.6em;color:var(--g);opacity:.6;margin-bottom:1.5rem;}
+.hmain{font-size:clamp(2rem,5.5vw,4.2rem);font-weight:300;line-height:1.2;}
+.sh{background:linear-gradient(135deg,var(--ch) 0%,var(--g) 25%,var(--ch) 50%,var(--gl) 75%,var(--ch) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:SHN 4s linear infinite;}
+.wra{display:flex;align-items:center;justify-content:center;margin:2.5rem auto;position:relative;width:fit-content;}
+.wr{width:64px;height:64px;border-radius:50%;border:2px solid var(--g);position:relative;box-shadow:0 0 28px rgba(201,168,76,.2);}
+.wr::before{content:'';position:absolute;inset:6px;border-radius:50%;border:1px solid rgba(201,168,76,.2);}
+.wr1{transform:translateX(12px);}
+.wr2{transform:translateX(-12px);background:radial-gradient(circle at 40% 40%,rgba(201,168,76,.05),transparent);}
+.wrh{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:1.3rem;color:var(--ml);animation:hb 2.5s ease-in-out infinite;z-index:1;}
+.hmsub{font-size:clamp(.9rem,2vw,1.2rem);font-style:italic;color:rgba(242,230,204,.48);margin-top:1.2rem;line-height:1.9;}
+.hmsub strong{color:var(--g);font-weight:400;}
+
+/* ════════════════════════════════════
+   COUNTDOWN
+════════════════════════════════════ */
+#countdown{padding:5rem 2rem;background:var(--bk);}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:700px;margin:0 auto;}
+.cd-box{text-align:center;padding:2rem 1rem;background:rgba(255,255,255,.018);border:1px solid rgba(201,168,76,.1);backdrop-filter:blur(12px);position:relative;overflow:hidden;}
+.cd-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,168,76,.05),transparent 60%);}
+.cd-num{font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:var(--ch);line-height:1;display:block;font-family:'Cormorant Garamond',serif;}
+.cd-lbl{font-family:'Noto Sans Devanagari',sans-serif;font-size:.6rem;letter-spacing:.35em;color:var(--g);opacity:.6;margin-top:.5rem;display:block;}
+.cd-married{text-align:center;margin-top:1.5rem;font-style:italic;color:rgba(201,168,76,.5);font-size:.85rem;letter-spacing:.1em;}
+.cd-edit-hint{text-align:center;margin-top:.8rem;font-size:.62rem;letter-spacing:.15em;color:rgba(242,230,204,.18);font-family:'Noto Sans Devanagari',sans-serif;}
+.cd-edit-hint code{color:rgba(201,168,76,.4);background:rgba(201,168,76,.07);padding:.1em .4em;border-radius:2px;}
+/* top big row */
+.cd-top{display:flex;align-items:center;justify-content:center;gap:2rem;max-width:600px;margin:0 auto 2rem;flex-wrap:wrap;}
+.cd-big{text-align:center;}
+.cd-bignum{display:block;font-size:clamp(3rem,8vw,6rem);font-weight:300;color:var(--ch);font-family:'Cormorant Garamond',serif;line-height:1;text-shadow:0 0 40px rgba(201,168,76,.18);}
+.cd-biglbl{display:block;font-family:'Noto Sans Devanagari',sans-serif;font-size:.62rem;letter-spacing:.4em;color:var(--g);opacity:.6;margin-top:.3rem;}
+.cd-sep{color:var(--g);font-size:1.2rem;opacity:.3;align-self:flex-start;padding-top:1.5rem;}
+/* HH MM SS */
+.cd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:460px;margin:0 auto;}
+/* total strip */
+.cd-total{text-align:center;margin-top:2rem;padding:1rem 2rem;background:rgba(255,255,255,.015);border:1px solid rgba(201,168,76,.08);display:inline-flex;align-items:center;gap:1.2rem;position:relative;left:50%;transform:translateX(-50%);}
+.cd-total-label{font-family:'Noto Sans Devanagari',sans-serif;font-size:.6rem;letter-spacing:.4em;color:rgba(201,168,76,.45);}
+.cd-total-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--g);letter-spacing:.05em;}
+@media(max-width:480px){.cd-grid{grid-template-columns:repeat(3,1fr);}
+.cd-top{gap:1rem;}
+.cd-bignum{font-size:clamp(2.2rem,10vw,4rem);}}
+
+/* ════════════════════════════════════
+   FEATURE GRID — HUB
+════════════════════════════════════ */
+#features{padding:7rem 2rem;background:linear-gradient(180deg,var(--bk) 0%,var(--bk2) 100%);}
+.fg{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem;max-width:1100px;margin:0 auto;}
+.fcard{background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);padding:2rem;backdrop-filter:blur(12px);cursor:pointer;transition:all .4s;position:relative;overflow:hidden;text-align:center;}
+.fcard::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,168,76,.06),transparent 55%);opacity:0;transition:opacity .4s;}
+.fcard:hover{border-color:rgba(201,168,76,.3);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4);}
+.fcard:hover::before{opacity:1;}
+.fcard-icon{font-size:2.2rem;margin-bottom:1rem;display:block;}
+.fcard-title{font-size:1.05rem;font-weight:400;color:var(--ch);margin-bottom:.5rem;}
+.fcard-desc{font-size:.78rem;font-style:italic;color:rgba(242,230,204,.4);line-height:1.75;}
+.fcard-tag{position:absolute;top:.7rem;right:.7rem;font-family:'Noto Sans Devanagari',sans-serif;font-size:.52rem;letter-spacing:.2em;color:var(--g);border:1px solid rgba(201,168,76,.25);padding:.15rem .5rem;opacity:.7;}
+
+/* ════════════════════════════════════
+   PHOTO ALBUM MODAL
+════════════════════════════════════ */
+#album-modal{position:fixed;inset:0;z-index:500;display:none;flex-direction:column;}
+#album-modal.open{display:flex;}
+.am-bg{position:absolute;inset:0;background:rgba(3,2,2,.96);backdrop-filter:blur(30px);}
+.am-inner{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;}
+.am-header{padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(201,168,76,.1);flex-shrink:0;}
+.am-title{font-size:1.1rem;font-weight:300;color:var(--ch);letter-spacing:.08em;}
+.am-title span{color:var(--g);font-style:italic;}
+.am-close{width:38px;height:38px;border:1px solid rgba(201,168,76,.3);background:transparent;color:var(--g);font-size:1.2rem;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;}
+.am-close:hover{background:rgba(201,168,76,.1);border-color:var(--g);}
+/* Album tabs */
+.am-tabs{display:flex;gap:0;border-bottom:1px solid rgba(201,168,76,.08);flex-shrink:0;overflow-x:auto;}
+.am-tab{padding:.75rem 1.5rem;font-family:'Noto Sans Devanagari',sans-serif;font-size:.7rem;letter-spacing:.25em;color:rgba(242,230,204,.35);background:transparent;border:none;cursor:pointer;transition:all .3s;white-space:nowrap;border-bottom:2px solid transparent;}
+.am-tab.active{color:var(--g);border-bottom-color:var(--g);background:rgba(201,168,76,.04);}
+.am-tab:hover:not(.active){color:rgba(242,230,204,.6);}
+/* Upload zone */
+.am-upload-bar{padding:.8rem 2rem;display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.015);border-bottom:1px solid rgba(201,168,76,.06);flex-shrink:0;flex-wrap:wrap;}
+.am-upload-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.2rem;border:1px solid rgba(201,168,76,.35);background:rgba(201,168,76,.06);color:var(--gl);font-family:'Noto Sans Devanagari',sans-serif;font-size:.72rem;letter-spacing:.15em;cursor:pointer;transition:all .3s;}
+.am-upload-btn:hover{border-color:var(--g);background:rgba(201,168,76,.1);}
+.am-upload-btn input{display:none;}
+.am-upload-info{font-size:.68rem;color:rgba(242,230,204,.3);font-style:italic;}
+/* Grid */
+.am-grid-wrap{flex:1;overflow-y:auto;padding:1.5rem 2rem;}
+.am-grid-wrap::-webkit-scrollbar{width:4px;}
+.am-grid-wrap::-webkit-scrollbar-track{background:rgba(255,255,255,.03);}
+.am-grid-wrap::-webkit-scrollbar-thumb{background:rgba(201,168,76,.3);border-radius:2px;}
+.am-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;}
+.am-card{position:relative;aspect-ratio:1;overflow:hidden;background:rgba(80,20,30,.3);border:1px solid rgba(201,168,76,.08);cursor:pointer;transition:all .4s;}
+.am-card:hover{border-color:rgba(201,168,76,.35);z-index:2;transform:scale(1.03);}
+.am-card img{width:100%;height:100%;object-fit:cover;display:block;}
+.am-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(3,2,2,.85));opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:.8rem;}
+.am-card:hover .am-card-overlay{opacity:1;}
+.am-card-caption{font-size:.72rem;color:rgba(242,230,204,.85);font-style:italic;}
+.am-card-delete{position:absolute;top:.4rem;right:.4rem;width:24px;height:24px;background:rgba(123,29,48,.8);border:1px solid rgba(201,168,76,.3);color:var(--g);font-size:.7rem;cursor:pointer;display:none;align-items:center;justify-content:center;border-radius:50%;transition:all .3s;}
+.am-card:hover .am-card-delete{display:flex;}
+.am-card-delete:hover{background:var(--ma);}
+/* Empty state */
+.am-empty{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:rgba(242,230,204,.25);}
+.am-empty-icon{font-size:3rem;margin-bottom:1rem;display:block;opacity:.4;}
+.am-empty-text{font-size:.88rem;font-style:italic;line-height:1.8;}
+/* Category label */
+.am-cat-label{font-size:.62rem;letter-spacing:.4em;color:rgba(201,168,76,.4);font-family:'Noto Sans Devanagari',sans-serif;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(201,168,76,.06);}
+/* Lightbox */
+#lightbox{position:absolute;inset:0;background:rgba(0,0,0,.96);z-index:10;display:none;align-items:center;justify-content:center;flex-direction:column;}
+#lightbox.open{display:flex;}
+#lb-img{max-width:90vw;max-height:80vh;object-fit:contain;border:1px solid rgba(201,168,76,.15);}
+#lb-caption{margin-top:1rem;font-size:.82rem;font-style:italic;color:rgba(242,230,204,.5);}
+.lb-close{position:absolute;top:1.5rem;right:1.5rem;width:40px;height:40px;border:1px solid rgba(201,168,76,.3);background:transparent;color:var(--g);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid rgba(201,168,76,.25);background:rgba(6,3,5,.8);color:var(--g);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;}
+.lb-nav:hover{border-color:var(--g);background:rgba(201,168,76,.1);}
+#lb-prev{left:1.5rem;}
+#lb-next{right:1.5rem;}
+.lb-counter{position:absolute;bottom:1.5rem;font-family:'Noto Sans Devanagari',sans-serif;font-size:.65rem;letter-spacing:.3em;color:rgba(201,168,76,.45);}
+
+/* ════════════════════════════════════
+   BLESSING WALL
+════════════════════════════════════ */
+#blessings{padding:7rem 2rem;background:var(--bk);}
+.blf{max-width:540px;margin:0 auto 3rem;display:flex;flex-direction:column;gap:.85rem;}
+.blin,.blta{background:rgba(255,255,255,.018);border:1px solid rgba(201,168,76,.15);color:var(--ch);font-family:'Noto Serif Devanagari',serif;font-size:.88rem;padding:.8rem 1.1rem;outline:none;transition:all .3s;width:100%;}
+.blin:focus,.blta:focus{border-color:rgba(201,168,76,.42);background:rgba(201,168,76,.03);}
+.blin::placeholder,.blta::placeholder{color:rgba(201,168,76,.25);}
+.blta{resize:vertical;min-height:90px;}
+.blbt{padding:.85rem;background:linear-gradient(135deg,rgba(123,29,48,.8),rgba(61,15,26,.9));border:1px solid rgba(201,168,76,.3);color:var(--gl);font-family:'Noto Serif Devanagari',serif;font-size:.88rem;letter-spacing:.12em;cursor:pointer;transition:all .4s;}
+.blbt:hover{border-color:var(--g);box-shadow:0 0 25px rgba(123,29,48,.35);}
+.blg{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1.1rem;}
+.blc{background:rgba(255,255,255,.016);border:1px solid rgba(201,168,76,.08);padding:1.3rem 1.5rem;position:relative;overflow:hidden;animation:cP .55s cubic-bezier(.34,1.56,.64,1) both;}
+@keyframes cP{from{opacity:0;transform:translateY(14px) scale(.97);}to{opacity:1;transform:none;}}
+.blc::before{content:'"';position:absolute;top:-1rem;left:.7rem;font-size:4.5rem;color:rgba(201,168,76,.06);font-family:'Cormorant Garamond',serif;line-height:1;}
+.blcn{font-size:.65rem;letter-spacing:.25em;color:var(--g);margin-bottom:.35rem;opacity:.75;}
+.blct{font-size:.82rem;font-style:italic;color:rgba(242,230,204,.6);line-height:1.82;}
+.bl-count{font-family:'Noto Sans Devanagari',sans-serif;font-size:.62rem;letter-spacing:.25em;color:rgba(201,168,76,.4);margin-bottom:1.5rem;text-align:center;}
+
+/* ════════════════════════════════════
+   QUOTE GENERATOR
+════════════════════════════════════ */
+#quotes{padding:7rem 2rem;background:var(--bk2);}
+.qbox{max-width:700px;margin:0 auto;text-align:center;}
+.qcard{background:rgba(255,255,255,.018);border:1px solid rgba(201,168,76,.12);padding:3rem 2.5rem;backdrop-filter:blur(16px);position:relative;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}
+.qcard::before{content:'"';position:absolute;top:-1.5rem;left:2rem;font-size:7rem;color:rgba(201,168,76,.06);font-family:'Cormorant Garamond',serif;line-height:1;}
+.qtxt{font-size:clamp(1.1rem,2.4vw,1.55rem);font-weight:300;font-style:italic;color:var(--ch);line-height:1.7;transition:all .5s;}
+.qtxt.fade{opacity:0;transform:translateY(8px);}
+.qsrc{font-family:'Noto Sans Devanagari',sans-serif;font-size:.62rem;letter-spacing:.35em;color:var(--g);opacity:.55;transition:all .5s;}
+.qbtns{display:flex;gap:1rem;margin-top:2rem;justify-content:center;flex-wrap:wrap;}
+.qbtn{padding:.7rem 1.8rem;border:1px solid rgba(201,168,76,.3);background:transparent;color:var(--gl);font-family:'Noto Serif Devanagari',serif;font-size:.82rem;letter-spacing:.12em;cursor:pointer;transition:all .3s;}
+.qbtn:hover{border-color:var(--g);background:rgba(201,168,76,.06);}
+.qbtn-copy{border-color:rgba(242,230,204,.12);color:rgba(242,230,204,.4);}
+.qbtn-copy.copied{border-color:var(--g);color:var(--g);}
+
+/* ════════════════════════════════════
+   LETTER / GMAIL
+════════════════════════════════════ */
+#letter{padding:7rem 2rem;background:var(--bk);}
+.lbx{max-width:580px;margin:0 auto;background:rgba(255,255,255,.014);border:1px solid rgba(201,168,76,.12);backdrop-filter:blur(20px);padding:2.8rem;}
+.ldsc{font-size:.85rem;font-style:italic;color:rgba(242,230,204,.38);line-height:1.9;margin-bottom:1.8rem;}
+.lin,.lta{background:rgba(255,255,255,.018);border:1px solid rgba(201,168,76,.13);color:var(--ch);font-family:'Noto Serif Devanagari',serif;font-size:.88rem;padding:.8rem 1.1rem;outline:none;transition:all .3s;width:100%;margin-bottom:.8rem;}
+.lin:focus,.lta:focus{border-color:rgba(201,168,76,.42);}
+.lin::placeholder,.lta::placeholder{color:rgba(201,168,76,.24);}
+.lta{resize:vertical;min-height:120px;}
+.lbtn{width:100%;padding:.95rem;background:transparent;border:1px solid var(--g);color:var(--g);font-family:'Noto Serif Devanagari',serif;font-size:.9rem;letter-spacing:.15em;cursor:pointer;transition:all .4s;}
+.lbtn:hover{background:rgba(201,168,76,.07);box-shadow:0 0 28px rgba(201,168,76,.07);}
+
+/* ════════════════════════════════════
+   MUSIC PLAYER (ambient)
+════════════════════════════════════ */
+#mplayer{position:fixed;bottom:2rem;right:2rem;z-index:300;display:flex;align-items:center;gap:.6rem;background:rgba(6,3,5,.88);border:1px solid rgba(201,168,76,.2);backdrop-filter:blur(20px);padding:.6rem 1rem;}
+.mp-btn{width:36px;height:36px;border:1px solid rgba(201,168,76,.35);background:transparent;color:var(--g);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all .3s;}
+.mp-btn:hover{background:rgba(201,168,76,.1);border-color:var(--g);}
+.mp-bars{display:flex;gap:2px;align-items:flex-end;height:18px;}
+.mp-bar{width:3px;background:var(--g);border-radius:1px;transition:height .3s;}
+.mp-bar.playing{animation:barAnim .8s ease-in-out infinite alternate;}
+.mp-bar:nth-child(2){animation-delay:.15s;}
+.mp-bar:nth-child(3){animation-delay:.3s;}
+.mp-bar:nth-child(4){animation-delay:.45s;}
+@keyframes barAnim{0%{height:4px;}100%{height:16px;}}
+.mp-label{font-family:'Noto Sans Devanagari',sans-serif;font-size:.58rem;letter-spacing:.2em;color:rgba(201,168,76,.45);}
+@media(max-width:480px){.mp-label{display:none;}}
+
+/* ════════════════════════════════════
+   PHOTO WIDGET — DAILY FRAME
+════════════════════════════════════ */
+#daily{padding:7rem 2rem;background:var(--bk);}
+.df-wrap{max-width:600px;margin:0 auto;text-align:center;}
+.df-frame{width:100%;max-width:460px;margin:0 auto;position:relative;}
+.df-inner{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,rgba(123,29,48,.2),rgba(61,15,26,.45));border:1px solid rgba(201,168,76,.15);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.df-upload-zone{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;color:rgba(242,230,204,.25);width:100%;height:100%;cursor:pointer;transition:all .4s;}
+.df-upload-zone:hover{background:rgba(201,168,76,.04);}
+.df-upload-zone svg{width:40px;height:40px;opacity:.3;}
+.df-upload-zone span{font-size:.72rem;letter-spacing:.25em;}
+.df-upload-zone input{display:none;}
+.df-img-display{width:100%;height:100%;object-fit:cover;display:none;}
+.df-corner{position:absolute;width:20px;height:20px;border-color:var(--g);border-style:solid;opacity:.4;}
+.df-corner-tl{top:8px;left:8px;border-width:1px 0 0 1px;}
+.df-corner-tr{top:8px;right:8px;border-width:1px 1px 0 0;}
+.df-corner-bl{bottom:8px;left:8px;border-width:0 0 1px 1px;}
+.df-corner-br{bottom:8px;right:8px;border-width:0 1px 1px 0;}
+.df-caption-area{margin-top:1.2rem;}
+.df-caption-input{width:100%;background:rgba(255,255,255,.018);border:1px solid rgba(201,168,76,.12);color:var(--ch);font-family:'Noto Serif Devanagari',serif;font-size:.88rem;padding:.7rem 1rem;outline:none;text-align:center;transition:all .3s;}
+.df-caption-input:focus{border-color:rgba(201,168,76,.38);}
+.df-caption-input::placeholder{color:rgba(242,230,204,.2);}
+.df-save-btn{margin-top:.8rem;padding:.7rem 2rem;border:1px solid rgba(201,168,76,.35);background:transparent;color:var(--gl);font-family:'Noto Serif Devanagari',serif;font-size:.82rem;letter-spacing:.15em;cursor:pointer;transition:all .3s;width:100%;}
+.df-save-btn:hover{border-color:var(--g);background:rgba(201,168,76,.06);}
+
+/* ════════════════════════════════════
+   WISH BOARD — interactive sticky notes
+════════════════════════════════════ */
+#wishboard{padding:7rem 2rem;background:var(--bk2);}
+.wb-area{position:relative;min-height:500px;background:rgba(255,255,255,.01);border:1px solid rgba(201,168,76,.07);overflow:hidden;}
+.wb-toolbar{padding:.8rem 1.5rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid rgba(201,168,76,.07);flex-wrap:wrap;}
+.wb-add-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.2rem;border:1px solid rgba(201,168,76,.3);background:rgba(201,168,76,.05);color:var(--gl);font-family:'Noto Sans Devanagari',sans-serif;font-size:.7rem;letter-spacing:.15em;cursor:pointer;transition:all .3s;}
+.wb-add-btn:hover{border-color:var(--g);}
+.wb-color-pick{display:flex;gap:.4rem;align-items:center;}
+.wb-clr{width:16px;height:16px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:border-color .2s;}
+.wb-clr.sel{border-color:rgba(255,255,255,.6);}
+.wb-info{font-size:.6rem;letter-spacing:.2em;color:rgba(242,230,204,.2);font-style:italic;}
+.wb-canvas{position:relative;min-height:440px;width:100%;}
+.sticky{position:absolute;width:180px;min-height:140px;padding:1rem;cursor:move;transition:box-shadow .3s;user-select:none;}
+.sticky:hover{box-shadow:0 12px 40px rgba(0,0,0,.5);}
+.sticky.drag{box-shadow:0 20px 60px rgba(0,0,0,.6);z-index:50;}
+.sticky-del{position:absolute;top:.3rem;right:.3rem;width:18px;height:18px;background:rgba(0,0,0,.3);border:none;color:rgba(255,255,255,.5);font-size:.65rem;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;}
+.sticky:hover .sticky-del{opacity:1;}
+.sticky-author{font-size:.6rem;letter-spacing:.15em;opacity:.55;margin-bottom:.4rem;font-family:'Noto Sans Devanagari',sans-serif;}
+.sticky-body{font-size:.82rem;font-style:italic;line-height:1.7;color:rgba(30,15,18,.88);background:transparent;border:none;resize:none;width:100%;outline:none;font-family:'Noto Serif Devanagari',serif;min-height:80px;}
+
+/* ════════════════════════════════════
+   ENDING
+════════════════════════════════════ */
+#ending{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,rgba(123,29,48,.15) 0%,transparent 65%),var(--bk);}
+#SC{position:absolute;inset:0;pointer-events:none;}
+.ern{display:flex;align-items:center;justify-content:center;margin-bottom:3rem;}
+.er{width:66px;height:66px;border-radius:50%;border:2px solid var(--g);position:relative;box-shadow:0 0 26px rgba(201,168,76,.17);}
+.er::before{content:'';position:absolute;inset:6px;border-radius:50%;border:1px solid rgba(201,168,76,.18);}
+.er1{transform:translateX(12px);opacity:0;animation:rRev 1.2s .5s cubic-bezier(.34,1.56,.64,1) forwards;}
+.er2{transform:translateX(-12px);opacity:0;animation:rRev 1.2s .8s cubic-bezier(.34,1.56,.64,1) forwards;}
+@keyframes rRev{from{opacity:0;transform:translateX(0) scale(.55);}to{opacity:1;}}
+.erh{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:1.3rem;color:var(--ml);animation:hb 2.5s ease-in-out infinite;z-index:1;}
+.ebig{font-size:clamp(1.5rem,3.5vw,2.6rem);font-weight:300;font-style:italic;color:var(--ch);line-height:1.6;max-width:660px;margin:0 auto 1.5rem;opacity:0;animation:fU 1.5s 1.2s ease forwards;}
+.enms{font-size:.95rem;letter-spacing:.28em;color:var(--g);margin-bottom:2.5rem;opacity:0;animation:fU 1.5s 2s ease forwards;}
+.efrom{font-size:.74rem;font-style:italic;color:rgba(242,230,204,.26);letter-spacing:.1em;opacity:0;animation:fU 1.5s 2.7s ease forwards;line-height:2.2;}
+.efrom strong{color:rgba(242,230,204,.5);font-weight:400;}
+
+/* PETALS */
+.pet{position:fixed;pointer-events:none;z-index:0;opacity:0;animation:PF linear infinite;}
+
+/* NOTIFICATION TOAST */
+#toast{position:fixed;bottom:6rem;left:50%;transform:translateX(-50%);background:rgba(6,3,5,.95);border:1px solid rgba(201,168,76,.3);color:var(--g);font-family:'Noto Sans Devanagari',sans-serif;font-size:.75rem;letter-spacing:.15em;padding:.7rem 1.8rem;z-index:9999;opacity:0;transition:opacity .4s;pointer-events:none;backdrop-filter:blur(12px);}
+#toast.show{opacity:1;}
+
+/* MODAL OVERLAY for quote share */
+#share-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:600;display:none;align-items:center;justify-content:center;}
+#share-overlay.open{display:flex;}
+.share-card{background:var(--bk2);border:1px solid rgba(201,168,76,.2);padding:2.5rem;max-width:420px;width:90%;text-align:center;}
+.share-card h3{font-size:1rem;font-weight:300;color:var(--ch);margin-bottom:1.5rem;letter-spacing:.1em;}
+.share-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;}
+.share-btn{padding:.6rem 1.4rem;border:1px solid rgba(201,168,76,.25);background:transparent;color:var(--gl);font-family:'Noto Sans Devanagari',sans-serif;font-size:.72rem;letter-spacing:.12em;cursor:pointer;transition:all .3s;}
+.share-btn:hover{border-color:var(--g);background:rgba(201,168,76,.07);}
+.share-close{margin-top:1.2rem;background:transparent;border:none;color:rgba(242,230,204,.3);font-size:.75rem;cursor:pointer;letter-spacing:.2em;}
+</style>
+</head>
+<body>
+<div id="CR"></div><div id="CR2"></div>
+<!-- LOADER -->
+<div id="LDR">
+  <div class="lw">
+    <div class="lring lr1"></div><div class="lring lr2"></div><div class="lring lr3"></div>
+    <span class="lhrt">❤</span>
+  </div>
+  <div class="ltxt">
+    <p class="lt1">भवानी & नवराजका लागि</p>
+    <p class="lt2">तयार हुँदैछ...</p>
+  </div>
+</div>
+<canvas id="PC"></canvas>
+<!-- MUSIC PLAYER -->
+<div id="mplayer">
+  <button class="mp-btn" id="mpbtn" onclick="toggleMusic()" title="Ambient Music">▶</button>
+  <div class="mp-bars" id="mpbars">
+    <div class="mp-bar" style="height:4px"></div>
+    <div class="mp-bar" style="height:8px"></div>
+    <div class="mp-bar" style="height:5px"></div>
+    <div class="mp-bar" style="height:10px"></div>
+  </div>
+  <span class="mp-label">संगीत</span>
+</div>
+<!-- NAV -->
+<nav id="NV">
+  <span class="nb">भवानी ✦ नवराज</span>
+  <ul class="nl">
+    <li><a href="#countdown">उत्सव</a></li>
+    <li><a href="#features">सुविधाहरू</a></li>
+    <li><a href="#blessings">आशीर्वाद</a></li>
+    <li><a href="#quotes">उद्धरण</a></li>
+    <li><a href="#wishboard">इच्छाबोर्ड</a></li>
+    <li><a href="#letter" class="nav-cta">पत्र पठाउनुहोस्</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero" class="sec">
+  <div class="hbg"></div><div class="o1"></div><div class="o2"></div>
+  <div class="hfw">
+    <div class="hfr">
+      <div class="hph">
+        <span class="hini">भ ✦ न</span>
+        <label style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.3rem;">
+          <span class="hplb">फोटो थप्नुहोस्</span>
+          <input type="file" accept="image/*" id="hero-photo-input" style="display:none" onchange="setHeroPhoto(this)">
+        </label>
+      </div>
+    </div>
+    <div class="hr1"><div class="hrd"></div></div>
+    <div class="hr2"></div>
+    <div class="hgt">💝 सानुमामी र सानुबुवा</div>
+  </div>
+  <div class="hcnt">
+    <p class="hsan">एक विशेष उपहार — मनदेखि अर्पण</p>
+    <h1 class="hnm">भवानी खकुरेल<span class="hamp">&</span>नवराज खत्री</h1>
+    <div class="hdiv"><div class="hdl"></div><span style="color:var(--g);font-size:.78rem;">✦</span><div class="hdl r"></div></div>
+    <p class="hdate">विवाह उत्सव — २०८२ बैशाख</p>
+    <div class="hero-btns">
+      <a href="#features" class="hbtn hbtn-p">✦ सुविधाहरू हेर्नुहोस्</a>
+      <button class="hbtn hbtn-s" onclick="openAlbum()">📷 फोटो एल्बम खोल्नुहोस्</button>
+    </div>
+  </div>
+  <div class="scd"><div class="sdt"></div><div class="sdt"></div><div class="sdt"></div></div>
+</section>
+
+<!-- ══ HAPPY MARRIED LIFE ══ -->
+<section id="hmr" class="sec">
+  <canvas id="fwc"></canvas>
+  <div class="hmcnt rv">
+    <p class="hmpre">✦ हार्दिक शुभकामना ✦</p>
+    <h2 class="hmain"><span class="sh">Happy Married Life!</span><br><span class="sh" style="font-size:.65em;font-style:italic;">विवाहको ढेरै शुभकामना</span></h2>
+    <div class="wra">
+      <div class="wr wr1"></div><div class="wrh">❤</div><div class="wr wr2"></div>
+    </div>
+    <p class="hmsub">मेरी प्यारी <strong>सानुमामी भवानी</strong> र मेरा प्रिय <strong>सानुबुवा नवराज</strong> —<br>तपाईंहरूको दाम्पत्य जीवन सदा सुखमय होस्।</p>
+  </div>
+</section>
+
+<!-- ══ COUNTDOWN ══ -->
+<section id="countdown" class="sec">
+  <div class="inn">
+    <p class="eye rv">विवाह उत्सव</p>
+    <h2 class="stit rv">सँगसँगै बिताएको समय</h2>
+    <p class="ssub rv">विवाहको ठीक क्षणदेखि — हरेक सेकेन्ड, हरेक दिन, हरेक वर्ष।<br><em style="font-size:.85em;opacity:.6;">यो घडी कहिल्यै रोकिँदैन — रिफ्रेस गर्दा पनि, बन्द गर्दा पनि।</em></p>
+
+    <!-- YEARS / MONTHS / DAYS big row -->
+    <div class="cd-top rv" id="cd-top">
+      <div class="cd-big"><span class="cd-bignum" id="cd-yrs">0</span><span class="cd-biglbl">वर्ष</span></div>
+      <div class="cd-sep">✦</div>
+      <div class="cd-big"><span class="cd-bignum" id="cd-mos">0</span><span class="cd-biglbl">महिना</span></div>
+      <div class="cd-sep">✦</div>
+      <div class="cd-big"><span class="cd-bignum" id="cd-dys">0</span><span class="cd-biglbl">दिन</span></div>
+    </div>
+
+    <!-- HH MM SS smaller row -->
+    <div class="cd-grid rv" id="cdgrid">
+      <div class="cd-box"><span class="cd-num" id="cd-h">00</span><span class="cd-lbl">घण्टा</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-m">00</span><span class="cd-lbl">मिनेट</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-s">00</span><span class="cd-lbl">सेकेन्ड</span></div>
+    </div>
+
+    <!-- Total seconds strip -->
+    <div class="cd-total rv">
+      <span class="cd-total-label">कुल सेकेन्ड</span>
+      <span class="cd-total-num" id="cd-total-sec">0</span>
+    </div>
+
+    <p class="cd-married rv" id="cd-status">— विवाहको ठीक क्षणदेखि बित्दैछ —</p>
+    <p class="cd-edit-hint rv">✎ विवाहको मिति/समय बदल्न HTML को <code>WEDDING_EPOCH</code> मान बदल्नुहोस्।</p>
+  </div>
+</section>
+
+<!-- ══ FEATURES HUB ══ -->
+<section id="features" class="sec">
+  <div class="inn">
+    <p class="eye rv">के-के छ यहाँ</p>
+    <h2 class="stit rv">सुविधाहरूको संसार</h2>
+    <p class="ssub rv">यो वेबसाइट केवल हेर्न मात्र होइन — प्रयोग गर्न बनाइएको छ।</p>
+    <div class="fg rv">
+      <div class="fcard" onclick="openAlbum()">
+        <span class="fcard-icon">📷</span>
+        <div class="fcard-tag">नयाँ</div>
+        <h3 class="fcard-title">फोटो एल्बम</h3>
+        <p class="fcard-desc">असीमित फोटोहरू राख्नुहोस्, क्याटेगोरी मिलाउनुहोस्, लाइटबक्समा हेर्नुहोस्।</p>
+      </div>
+      <div class="fcard" onclick="document.getElementById('daily').scrollIntoView({behavior:'smooth'})">
+        <span class="fcard-icon">🖼️</span>
+        <div class="fcard-tag">विशेष</div>
+        <h3 class="fcard-title">दैनिक फ्रेम</h3>
+        <p class="fcard-desc">आफ्नो मनपर्ने फोटो राख्नुहोस् र क्याप्सन थप्नुहोस्।</p>
+      </div>
+      <div class="fcard" onclick="document.getElementById('blessings').scrollIntoView({behavior:'smooth'})">
+        <span class="fcard-icon">🙏</span>
+        <h3 class="fcard-title">आशीर्वाद भित्ता</h3>
+        <p class="fcard-desc">आफ्नो नाम र शुभकामना छाड्नुहोस् — सबैका इच्छाहरू एकै ठाउँमा।</p>
+      </div>
+      <div class="fcard" onclick="document.getElementById('quotes').scrollIntoView({behavior:'smooth'})">
+        <span class="fcard-icon">✍️</span>
+        <h3 class="fcard-title">उद्धरण संग्रह</h3>
+        <p class="fcard-desc">प्रेम, जीवन र दाम्पत्यका सुन्दर नेपाली उद्धरणहरू — share गर्नुहोस्।</p>
+      </div>
+      <div class="fcard" onclick="document.getElementById('wishboard').scrollIntoView({behavior:'smooth'})">
+        <span class="fcard-icon">📌</span>
+        <div class="fcard-tag">मजाको</div>
+        <h3 class="fcard-title">इच्छाबोर्ड</h3>
+        <p class="fcard-desc">रंगीन sticky notes राख्नुहोस् — तान्नुहोस्, हल्लाउनुहोस्, सजाउनुहोस्।</p>
+      </div>
+      <div class="fcard" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+        <span class="fcard-icon">✉️</span>
+        <h3 class="fcard-title">व्यक्तिगत पत्र</h3>
+        <p class="fcard-desc">भवानी र नवराजलाई सिधै Gmail मार्फत पत्र पठाउनुहोस्।</p>
+      </div>
+      <div class="fcard" onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})">
+        <span class="fcard-icon">⏳</span>
+        <h3 class="fcard-title">विवाह काउन्टडाउन</h3>
+        <p class="fcard-desc">विवाहको दिनदेखि कति समय बित्यो — लाइभ काउन्टर।</p>
+      </div>
+      <div class="fcard" onclick="toggleMusic()">
+        <span class="fcard-icon">🎵</span>
+        <h3 class="fcard-title">परिवेशी संगीत</h3>
+        <p class="fcard-desc">सफ्ट ambient संगीत — वेबसाइट हेर्दा मनलाई शान्ति दिन्छ।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTO ALBUM MODAL ══ -->
+<div id="album-modal">
+  <div class="am-bg"></div>
+  <div class="am-inner">
+    <div class="am-header">
+      <div>
+        <p style="font-family:'Noto Sans Devanagari',sans-serif;font-size:.6rem;letter-spacing:.4em;color:var(--g);opacity:.6;margin-bottom:.2rem;">फोटो संग्रह</p>
+        <h2 class="am-title">भवानी & नवराजको <span>यादगार एल्बम</span></h2>
+      </div>
+      <button class="am-close" onclick="closeAlbum()">✕</button>
+    </div>
+    <div class="am-tabs" id="am-tabs">
+      <button class="am-tab active" data-cat="all" onclick="switchCat('all',this)">सबै</button>
+      <button class="am-tab" data-cat="wedding" onclick="switchCat('wedding',this)">विवाह</button>
+      <button class="am-tab" data-cat="family" onclick="switchCat('family',this)">परिवार</button>
+      <button class="am-tab" data-cat="memories" onclick="switchCat('memories',this)">यादहरू</button>
+      <button class="am-tab" data-cat="fun" onclick="switchCat('fun',this)">मोज</button>
+    </div>
+    <div class="am-upload-bar">
+      <span class="am-upload-info" style="color:rgba(201,168,76,.5);font-size:.68rem;letter-spacing:.15em;">📂 फोटोहरू GitHub बाट स्वचालित लोड हुन्छन्</span>
+      <span class="am-upload-info" id="am-count" style="margin-left:auto;">४९ फोटो</span>
+    </div>
+    <div class="am-grid-wrap">
+      <div class="am-grid" id="am-grid">
+        <div class="am-empty" id="am-empty">
+          <span class="am-empty-icon">📷</span>
+          <p class="am-empty-text">यहाँ अहिले कुनै फोटो छैन।<br>माथिको बटनले फोटो थप्नुहोस् — असीमित फोटो राख्न सकिन्छ।<br><em style="opacity:.6;font-size:.85em;">सबै फोटो तपाईंको ब्राउजरमा सुरक्षित रहन्छ।</em></p>
+        </div>
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox">
+      <button class="lb-close" onclick="closeLightbox()">✕</button>
+      <button class="lb-nav" id="lb-prev" onclick="lbNav(-1)">‹</button>
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption"></p>
+      <button class="lb-nav" id="lb-next" onclick="lbNav(1)">›</button>
+      <p class="lb-counter" id="lb-counter"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ DAILY FRAME ══ -->
+<section id="daily" class="sec">
+  <div class="inn">
+    <p class="eye rv">दैनिक फ्रेम</p>
+    <h2 class="stit rv">आजको विशेष तस्बिर</h2>
+    <p class="ssub rv">आफ्नो मनपर्ने फोटो राख्नुहोस् र सुन्दर क्याप्सन दिनुहोस्।</p>
+    <div class="df-wrap rv">
+      <div class="df-frame">
+        <div class="df-inner" id="df-inner">
+          <label class="df-upload-zone" id="df-zone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>फोटो छान्नुहोस्</span>
+            <input type="file" accept="image/*" onchange="setDailyFrame(this)">
+          </label>
+          <img class="df-img-display" id="df-img" src="" alt="">
+          <div class="df-corner df-corner-tl"></div>
+          <div class="df-corner df-corner-tr"></div>
+          <div class="df-corner df-corner-bl"></div>
+          <div class="df-corner df-corner-br"></div>
+        </div>
+        <div class="df-caption-area">
+          <input class="df-caption-input" id="df-caption" placeholder="यस तस्बिरको क्याप्सन लेख्नुहोस्..." maxlength="120">
+          <button class="df-save-btn" onclick="saveDailyFrame()">✦ सुरक्षित गर्नुहोस्</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BLESSINGS ══ -->
+<section id="blessings" class="sec">
+  <div class="inn">
+    <p class="eye rv">आशीर्वाद</p>
+    <h2 class="stit rv">शुभकामनाको भित्ता</h2>
+    <p class="ssub rv">तपाईंको मन छ भने, यहाँ आफ्नो शुभकामना छाड्नुहोस्।</p>
+    <div class="blf rv">
+      <input class="blin" id="BLN" placeholder="तपाईंको नाम...">
+      <textarea class="blta" id="BLT" placeholder="भवानी र नवराजलाई आफ्नो शुभकामना..."></textarea>
+      <button class="blbt" onclick="addBl()">✦ शुभकामना थप्नुहोस्</button>
+    </div>
+    <p class="bl-count" id="bl-count"></p>
+    <div class="blg" id="BLG">
+      <div class="blc"><p class="blcn">एक आफन्त</p><p class="blct">तपाईंहरूको यो नयाँ यात्रा सदा सुखमय होस्। जीवनभर एकअर्काका साथी रहनुहोस्।</p></div>
+      <div class="blc"><p class="blcn">परिवारको तर्फबाट</p><p class="blct">भवानी र नवराज — तपाईंहरूको हाँसो हाम्रो घरको उज्यालो हो। सदा समृद्ध रहनुहोस्।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUOTE GENERATOR ══ -->
+<section id="quotes" class="sec">
+  <div class="inn">
+    <p class="eye rv">उद्धरण संग्रह</p>
+    <h2 class="stit rv">मनका कुरा</h2>
+    <p class="ssub rv">नेपाली दाम्पत्य र जीवनका सुन्दर उद्धरणहरू — प्रत्येक क्लिकमा नयाँ।</p>
+    <div class="qbox rv">
+      <div class="qcard">
+        <p class="qtxt" id="qtxt">प्रेम भनेको अनुभव हो — शब्दले भन्न नसकिने, मनले मात्र बुझिने।</p>
+        <p class="qsrc" id="qsrc">— नेपाली उद्धरण</p>
+      </div>
+      <div class="qbtns">
+        <button class="qbtn" onclick="nextQuote()">✦ अर्को उद्धरण</button>
+        <button class="qbtn qbtn-copy" id="qcopy" onclick="copyQuote()">प्रतिलिपि गर्नुहोस्</button>
+        <button class="qbtn" onclick="shareQuote()">साझा गर्नुहोस्</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WISH BOARD ══ -->
+<section id="wishboard" class="sec">
+  <div class="inn">
+    <p class="eye rv">इच्छाबोर्ड</p>
+    <h2 class="stit rv">सबैका शुभेच्छाहरू</h2>
+    <p class="ssub rv">रंगीन नोट राख्नुहोस् — तान्नुहोस्, सजाउनुहोस्, आफ्नो बनाउनुहोस्।</p>
+    <div class="rv">
+      <div class="wb-area">
+        <div class="wb-toolbar">
+          <button class="wb-add-btn" onclick="addSticky()">+ नयाँ नोट थप्नुहोस्</button>
+          <div class="wb-color-pick" id="wbcolors">
+            <span style="font-family:'Noto Sans Devanagari',sans-serif;font-size:.6rem;letter-spacing:.2em;color:rgba(242,230,204,.3);">रंग:</span>
+          </div>
+          <span class="wb-info">नोट तान्न सकिन्छ • डबल-क्लिक गरेर सम्पादन गर्नुहोस्</span>
+        </div>
+        <div class="wb-canvas" id="wbcanvas"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LETTER ══ -->
+<section id="letter" class="sec">
+  <div class="inn">
+    <p class="eye rv">व्यक्तिगत पत्र</p>
+    <h2 class="stit rv">यदि केही भन्न मन छ भने...</h2>
+    <p class="ssub rv" style="margin-bottom:2rem;">तपाईंका शब्दहरू सिधै उनीहरूसम्म पुग्नेछन्।</p>
+    <div class="lbx rv">
+      <p class="ldsc">भवानी र नवराजलाई व्यक्तिगत सन्देश पठाउन चाहनुहुन्छ? यहाँ लेख्नुहोस् — यो Gmail मार्फत सिधै पठाइन्छ।</p>
+      <input class="lin" id="LFR" placeholder="तपाईंको नाम...">
+      <input class="lin" id="LSB" placeholder="विषय (optional)...">
+      <textarea class="lta" id="LBD" placeholder="तपाईंका शब्दहरू..."></textarea>
+      <button class="lbtn" onclick="sendL()">✦ Gmail मार्फत पठाउनुहोस् ✦</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ENDING ══ -->
+<section id="ending" class="sec">
+  <canvas id="SC"></canvas>
+  <div class="ern">
+    <div class="er er1"></div><div class="erh">❤</div><div class="er er2"></div>
+  </div>
+  <p class="ebig">"सुख, स्वास्थ्य र समृद्धिले भरिएको<br>दाम्पत्य जीवनको<br><em style="color:var(--g);">हार्दिक शुभकामना।"</em></p>
+  <div class="gline" style="width:160px;margin:1rem auto;"></div>
+  <p class="enms">भवानी खकुरेल  ✦  नवराज खत्री</p>
+  <p class="efrom">यो डिजिटल उपहार<br><strong>सानुमामी र सानुबुवा</strong> —<br>तपाईंहरू दुवैलाई मायासहित अर्पण।<br><br><em style="color:rgba(201,168,76,.38);font-size:.9em;">💝 तपाईंहरूको आफ्नाको तर्फबाट</em></p>
+</section>
+
+<!-- Share overlay -->
+<div id="share-overlay">
+  <div class="share-card">
+    <h3>उद्धरण साझा गर्नुहोस्</h3>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareVia('whatsapp')">WhatsApp</button>
+      <button class="share-btn" onclick="shareVia('facebook')">Facebook</button>
+      <button class="share-btn" onclick="shareVia('copy')">लिंक कपी</button>
+    </div>
+    <button class="share-close" onclick="document.getElementById('share-overlay').classList.remove('open')">बन्द गर्नुहोस्</button>
+  </div>
+</div>
+<div id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════
+// CURSOR
+// ═══════════════════════════════════════════════
+const CR=document.getElementById('CR'),CR2=document.getElementById('CR2');
+let mx=0,my=0,tx=0,ty=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;CR.style.left=(mx-5)+'px';CR.style.top=(my-5)+'px';});
+setInterval(()=>{tx+=(mx-tx)*.11;ty+=(my-ty)*.11;CR2.style.left=(tx-16)+'px';CR2.style.top=(ty-16)+'px';},16);
+document.querySelectorAll('a,button,.fcard,.am-card,.blc,.qcard,.sticky,.gc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{CR.style.transform='scale(3)';CR2.style.transform='scale(1.5)';CR2.style.borderColor='rgba(201,168,76,.65)';});
+  el.addEventListener('mouseleave',()=>{CR.style.transform='scale(1)';CR2.style.transform='scale(1)';CR2.style.borderColor='rgba(201,168,76,.32)';});
+});
+
+// ═══════════════════════════════════════════════
+// LOADER
+// ═══════════════════════════════════════════════
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('LDR').classList.add('out'),2200));
+
+// ═══════════════════════════════════════════════
+// NAV
+// ═══════════════════════════════════════════════
+window.addEventListener('scroll',()=>document.getElementById('NV').classList.toggle('sc',scrollY>60));
+
+// ═══════════════════════════════════════════════
+// PARTICLES
+// ═══════════════════════════════════════════════
+(()=>{
+  const cv=document.getElementById('PC'),ctx=cv.getContext('2d');
+  let W,H,pts=[];
+  const rs=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight;};rs();window.addEventListener('resize',rs);
+  for(let i=0;i<130;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.1,vy:(Math.random()-.5)*.1,r:Math.random()*1.3+.2,a:Math.random()*.45+.06,g:Math.random()<.38});
+  (function draw(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.g?`rgba(201,168,76,${p.a})`:`rgba(242,230,204,${p.a*.3})`;ctx.fill();});requestAnimationFrame(draw);})();
+})();
+
+// ═══════════════════════════════════════════════
+// PETALS
+// ═══════════════════════════════════════════════
+(()=>{
+  const P=['❀','✿','❁','✾'];
+  setInterval(()=>{const el=document.createElement('div');el.className='pet';el.textContent=P[Math.floor(Math.random()*P.length)];el.style.cssText=`left:${Math.random()*100}vw;font-size:${Math.random()*.7+.4}rem;color:rgba(201,168,76,${Math.random()*.25+.06});animation-duration:${Math.random()*13+9}s;animation-delay:${Math.random()*3}s;`;document.body.appendChild(el);setTimeout(()=>el.remove(),22000);},2500);
+})();
+
+// ═══════════════════════════════════════════════
+// SCROLL REVEAL
+// ═══════════════════════════════════════════════
+document.querySelectorAll('.rv').forEach(el=>new IntersectionObserver(es=>{if(es[0].isIntersecting)el.classList.add('vs');},{threshold:.08}).observe(el));
+
+// ═══════════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════════
+function toast(msg,dur=2800){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur);}
+
+// ═══════════════════════════════════════════════
+// FIREWORKS
+// ═══════════════════════════════════════════════
+(()=>{
+  const cv=document.getElementById('fwc'),ctx=cv.getContext('2d');
+  let W,H,dots=[],running=false,last=0;
+  const rs=()=>{W=cv.width=cv.offsetWidth||800;H=cv.height=cv.offsetHeight||400;};rs();window.addEventListener('resize',rs);
+  const cols=['rgba(201,168,76,.9)','rgba(232,201,122,.8)','rgba(245,230,192,.7)','rgba(139,38,53,.8)','rgba(168,48,80,.75)'];
+  function burst(bx,by){for(let i=0;i<28;i++){const a=Math.random()*Math.PI*2,s=Math.random()*2.6+.8;dots.push({x:bx,y:by,vx:Math.cos(a)*s,vy:Math.sin(a)*s,r:Math.random()*2.3+.5,life:1,c:cols[Math.floor(Math.random()*cols.length)]});}}
+  function anim(t){if(!running)return;ctx.clearRect(0,0,W,H);if(t-last>1200){burst(W*.25+Math.random()*W*.5,H*.15+Math.random()*H*.55);last=t;}dots=dots.filter(d=>{d.x+=d.vx;d.y+=d.vy;d.vy+=.04;d.life-=.015;if(d.life<=0)return false;ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,Math.PI*2);ctx.fillStyle=d.c.replace(/[\d.]+\)$/,`${d.life})`);ctx.fill();return true;});requestAnimationFrame(anim);}
+  new IntersectionObserver(es=>{if(es[0].isIntersecting&&!running){running=true;burst(W*.3,H*.35);burst(W*.7,H*.4);requestAnimationFrame(anim);}else if(!es[0].isIntersecting)running=false;},{threshold:.25}).observe(document.getElementById('hmr'));
+})();
+
+// ═══════════════════════════════════════════════
+// STAR FIELD
+// ═══════════════════════════════════════════════
+(()=>{
+  const cv=document.getElementById('SC'),ctx=cv.getContext('2d');
+  let W,H,st=[];
+  const rs=()=>{W=cv.width=cv.offsetWidth||800;H=cv.height=cv.offsetHeight||600;};rs();window.addEventListener('resize',rs);
+  for(let i=0;i<200;i++)st.push({x:Math.random(),y:Math.random(),r:Math.random()*.8+.1,a:Math.random()*.55+.1,s:Math.random()*.005+.0015,ph:Math.random()*Math.PI*2});
+  (function draw(){ctx.clearRect(0,0,W,H);st.forEach(s=>{s.ph+=s.s;ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(201,168,76,${s.a*(Math.sin(s.ph)*.5+.5)})`;ctx.fill();});requestAnimationFrame(draw);})();
+})();
+
+// ═══════════════════════════════════════════════
+// COUNTDOWN — EPOCH BASED, ALWAYS ACCURATE
+// ═══════════════════════════════════════════════
+// ✎ HOW TO SET: Go to https://www.epochconverter.com
+//   Enter the EXACT wedding date + time (Nepal Time, UTC+5:45)
+//   Paste the Unix timestamp (milliseconds) below.
+//   Example: 2025-04-15 11:30:00 NPT  →  1744691400000
+//
+//   This number is fixed forever. JavaScript's Date.now() always
+//   counts forward from it, so the timer is accurate even after
+//   years, across refreshes, closed tabs, and different devices.
+// ──────────────────────────────────────────────
+const WEDDING_EPOCH = 1778674256000; // ← यहाँ Epoch milliseconds राख्नुहोस्
+// ──────────────────────────────────────────────
+
+function updateCD(){
+  const nowMs  = Date.now();
+  const diffMs = nowMs - WEDDING_EPOCH;
+
+  if(diffMs < 0){
+    // Future — countdown TO wedding
+    const abs = Math.abs(diffMs);
+    const totSec = Math.floor(abs/1000);
+    const ss  = totSec % 60;
+    const mm  = Math.floor(totSec/60) % 60;
+    const hh  = Math.floor(totSec/3600) % 24;
+    const dd  = Math.floor(totSec/86400);
+    document.getElementById('cd-yrs').textContent = '0';
+    document.getElementById('cd-mos').textContent = '0';
+    document.getElementById('cd-dys').textContent = String(dd);
+    document.getElementById('cd-h').textContent   = String(hh).padStart(2,'0');
+    document.getElementById('cd-m').textContent   = String(mm).padStart(2,'0');
+    document.getElementById('cd-s').textContent   = String(ss).padStart(2,'0');
+    document.getElementById('cd-total-sec').textContent = String(Math.floor(abs/1000)).replace(/\B(?=(\d{3})+(?!\d))/g,',');
+    document.getElementById('cd-status').textContent    = '— विवाहको दिनसम्म बाँकी —';
+    return;
+  }
+
+  // Past — count UP since wedding
+  const wDate  = new Date(WEDDING_EPOCH);
+  const nDate  = new Date(nowMs);
+
+  // Gregorian years/months/remaining-days
+  let years  = nDate.getFullYear() - wDate.getFullYear();
+  let months = nDate.getMonth()    - wDate.getMonth();
+  let days   = nDate.getDate()     - wDate.getDate();
+
+  if(days < 0){
+    months--;
+    // days in the previous month
+    const prev = new Date(nDate.getFullYear(), nDate.getMonth(), 0);
+    days += prev.getDate();
+  }
+  if(months < 0){ years--; months += 12; }
+
+  // Hours / minutes / seconds within the current day
+  const totSec = Math.floor(diffMs/1000);
+  const ss = totSec % 60;
+  const mm = Math.floor(totSec/60) % 60;
+  const hh = Math.floor(totSec/3600) % 24;
+
+  document.getElementById('cd-yrs').textContent = String(years);
+  document.getElementById('cd-mos').textContent = String(months);
+  document.getElementById('cd-dys').textContent = String(days);
+  document.getElementById('cd-h').textContent   = String(hh).padStart(2,'0');
+  document.getElementById('cd-m').textContent   = String(mm).padStart(2,'0');
+  document.getElementById('cd-s').textContent   = String(ss).padStart(2,'0');
+  document.getElementById('cd-total-sec').textContent = String(totSec).replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  document.getElementById('cd-status').textContent    = '— सुखी दाम्पत्य जीवनको बितेको क्षण —';
+}
+updateCD();
+setInterval(updateCD, 1000);
+
+// ═══════════════════════════════════════════════
+// HERO PHOTO
+// ═══════════════════════════════════════════════
+function setHeroPhoto(input){
+  if(!input.files[0])return;
+  const url=URL.createObjectURL(input.files[0]);
+  const ph=document.querySelector('.hph');
+  ph.style.backgroundImage=`url(${url})`;
+  ph.style.backgroundSize='cover';
+  ph.style.backgroundPosition='center';
+  ph.innerHTML='';
+  toast('✦ फोटो सेट भयो!');
+}
+
+// ═══════════════════════════════════════════════
+// PHOTO ALBUM — GITHUB RAW URLs (manual, permanent)
+// ═══════════════════════════════════════════════
+// ✎ HOW TO ADD MORE PHOTOS:
+//   1. Upload .jpg files to your GitHub repo under a /photos/ folder
+//   2. Raw URL format:
+//      https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/photos/FILENAME.jpg
+//   3. Add a new line in ALBUM_PHOTOS below, e.g.:
+//      { url: GITHUB_BASE + 'NEW_PHOTO.jpg', cat:'wedding', caption:'...' }
+//   Categories: 'wedding' | 'family' | 'memories' | 'fun'
+// ─────────────────────────────────────────────────────────
+const GITHUB_BASE = 'https://raw.githubusercontent.com/dipeshkharel14-hub/Happy-married-life-/main/';
+// ↑ Images are in the ROOT of the repo — no subfolder needed
+
+const ALBUM_PHOTOS = [
+  // ── IMG files — विवाह दिनका तस्बिर (May 11, 2026) ─────
+  { url: GITHUB_BASE+'IMG_20260511_193538.jpg', cat:'wedding', caption:'विवाह उत्सव — भवानी र नवराज' },
+  { url: GITHUB_BASE+'IMG_20260511_193508.jpg', cat:'wedding', caption:'विशेष क्षण' },
+  { url: GITHUB_BASE+'IMG_20260511_193434.jpg', cat:'wedding', caption:'सुन्दर पल' },
+  { url: GITHUB_BASE+'IMG_20260511_193356.jpg', cat:'wedding', caption:'यादगार दिन' },
+  { url: GITHUB_BASE+'IMG_20260511_193327.jpg', cat:'wedding', caption:'विवाह समारोह' },
+  { url: GITHUB_BASE+'IMG_20260511_193231.jpg', cat:'wedding', caption:'खुसीको क्षण' },
+  { url: GITHUB_BASE+'IMG_20260511_193205.jpg', cat:'wedding', caption:'अनुपम क्षण' },
+  // ── FB files ─────────────────────────────────
+  { url: GITHUB_BASE+'FB_IMG_1778506792668.jpg', cat:'wedding',  caption:'विवाह स्मृति' },
+  { url: GITHUB_BASE+'FB_IMG_1778506789814.jpg', cat:'wedding',  caption:'सँगसँगै' },
+  { url: GITHUB_BASE+'FB_IMG_1778506785342.jpg', cat:'wedding',  caption:'मीठो याद' },
+  { url: GITHUB_BASE+'FB_IMG_1778506778968.jpg', cat:'wedding',  caption:'सुन्दर स्मृति' },
+  { url: GITHUB_BASE+'FB_IMG_1778506517091.jpg', cat:'family',   caption:'परिवार' },
+  { url: GITHUB_BASE+'FB_IMG_1778506509014.jpg', cat:'family',   caption:'प्रियजनहरू' },
+  { url: GITHUB_BASE+'FB_IMG_1778506520242.jpg', cat:'family',   caption:'परिवारको माया' },
+  { url: GITHUB_BASE+'FB_IMG_1778506470615.jpg', cat:'family',   caption:'आफन्तहरू' },
+  { url: GITHUB_BASE+'FB_IMG_1778506495192.jpg', cat:'family',   caption:'सँगै' },
+  { url: GITHUB_BASE+'FB_IMG_1778506438627.jpg', cat:'memories', caption:'विशेष याद' },
+  { url: GITHUB_BASE+'FB_IMG_1778506456753.jpg', cat:'memories', caption:'अनुपम पल' },
+  { url: GITHUB_BASE+'FB_IMG_1778506396436.jpg', cat:'memories', caption:'मन छुने क्षण' },
+  { url: GITHUB_BASE+'FB_IMG_1778506429280.jpg', cat:'memories', caption:'मीठो स्मृति' },
+  { url: GITHUB_BASE+'FB_IMG_1778506370005.jpg', cat:'fun',      caption:'खुसीको पल' },
+  { url: GITHUB_BASE+'FB_IMG_1778506377686.jpg', cat:'fun',      caption:'हाँसो' },
+  { url: GITHUB_BASE+'FB_IMG_1778506246026.jpg', cat:'fun',      caption:'मोजमस्ती' },
+  { url: GITHUB_BASE+'FB_IMG_1778506357721.jpg', cat:'fun',      caption:'आनन्द' },
+  { url: GITHUB_BASE+'FB_IMG_1778506206597.jpg', cat:'memories', caption:'सम्झना' },
+  { url: GITHUB_BASE+'FB_IMG_1778506236953.jpg', cat:'memories', caption:'यादहरू' },
+  { url: GITHUB_BASE+'FB_IMG_1778506196370.jpg', cat:'memories', caption:'अमूल्य क्षण' },
+  { url: GITHUB_BASE+'FB_IMG_1778506199664.jpg', cat:'memories', caption:'प्रिय याद' },
+  { url: GITHUB_BASE+'FB_IMG_1778506183741.jpg', cat:'memories', caption:'सुन्दर पल' },
+  { url: GITHUB_BASE+'FB_IMG_1778506193088.jpg', cat:'memories', caption:'जीवनको रंग' },
+  { url: GITHUB_BASE+'FB_IMG_1778506143330.jpg', cat:'family',   caption:'घर परिवार' },
+  { url: GITHUB_BASE+'FB_IMG_1778506154352.jpg', cat:'family',   caption:'आफन्त' },
+  { url: GITHUB_BASE+'FB_IMG_1778506013339.jpg', cat:'wedding',  caption:'विवाह' },
+  { url: GITHUB_BASE+'FB_IMG_1778506048279.jpg', cat:'wedding',  caption:'शुभ विवाह' },
+  { url: GITHUB_BASE+'FB_IMG_1778505714139.jpg', cat:'wedding',  caption:'विवाह उत्सव' },
+  { url: GITHUB_BASE+'FB_IMG_1778505761824.jpg', cat:'wedding',  caption:'नयाँ सुरुवात' },
+  { url: GITHUB_BASE+'FB_IMG_1778486604885.jpg', cat:'memories', caption:'पुरानो याद' },
+  { url: GITHUB_BASE+'FB_IMG_1778486624715.jpg', cat:'memories', caption:'मीठो सम्झना' },
+  { url: GITHUB_BASE+'FB_IMG_1778486599929.jpg', cat:'memories', caption:'अनमोल क्षण' },
+  { url: GITHUB_BASE+'FB_IMG_1778486602905.jpg', cat:'memories', caption:'सुन्दर याद' },
+  { url: GITHUB_BASE+'FB_IMG_1778486572634.jpg', cat:'fun',      caption:'रमाइलो' },
+  { url: GITHUB_BASE+'FB_IMG_1778486597571.jpg', cat:'fun',      caption:'खुसी' },
+  { url: GITHUB_BASE+'FB_IMG_1778486534179.jpg', cat:'family',   caption:'परिवार' },
+  { url: GITHUB_BASE+'FB_IMG_1778486524549.jpg', cat:'family',   caption:'प्रियजन' },
+  { url: GITHUB_BASE+'FB_IMG_1778486506987.jpg', cat:'family',   caption:'घर' },
+  { url: GITHUB_BASE+'FB_IMG_1778486511690.jpg', cat:'family',   caption:'आफन्त' },
+  { url: GITHUB_BASE+'FB_IMG_1778486516601.jpg', cat:'family',   caption:'सँगसँगै' },
+  { url: GITHUB_BASE+'FB_IMG_1778486521934.jpg', cat:'family',   caption:'माया' },
+  { url: GITHUB_BASE+'FB_IMG_1778486502160.jpg', cat:'family',   caption:'परिवारको साथ' },
+  // ── थप फोटो यहाँ थप्नुहोस् ──────────────────
+  // { url: GITHUB_BASE+'NEW_FILE.jpg', cat:'wedding', caption:'...' },
+];
+
+// ── Album state ───────────────────────────────
+let currentCat='all';
+let lbPhotos=[], lbIndex=0;
+
+function openAlbum(){
+  document.getElementById('album-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  renderAlbum();
+}
+function closeAlbum(){
+  document.getElementById('album-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function switchCat(cat,btn){
+  currentCat=cat;
+  document.querySelectorAll('.am-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  renderAlbum();
+}
+function catName(c){return{wedding:'विवाह',family:'परिवार',memories:'यादहरू',fun:'मोज'}[c]||c;}
+
+function renderAlbum(){
+  const grid   = document.getElementById('am-grid');
+  const empty  = document.getElementById('am-empty');
+  const filtered = currentCat==='all' ? ALBUM_PHOTOS : ALBUM_PHOTOS.filter(p=>p.cat===currentCat);
+  Array.from(grid.children).forEach(c=>{if(c!==empty)c.remove();});
+  document.getElementById('am-count').textContent = ALBUM_PHOTOS.length+' फोटो';
+  if(filtered.length===0){empty.style.display='';return;}
+  empty.style.display='none';
+
+  filtered.forEach((p,i)=>{
+    const card=document.createElement('div');
+    card.className='am-card';
+
+    // Build image — load src directly (no data-src trick that breaks in modals)
+    const img=document.createElement('img');
+    img.alt=p.caption;
+    img.crossOrigin='anonymous';             // required for GitHub raw URLs
+    img.style.cssText='width:100%;height:100%;object-fit:cover;display:block;background:rgba(80,20,30,.35);transition:opacity .4s;opacity:0;';
+    img.onload =()=>{ img.style.opacity='1'; };
+    img.onerror=()=>{
+      // Show a styled fallback so the card doesn't look blank
+      img.style.opacity='.0';
+      card.style.background='linear-gradient(135deg,rgba(100,25,40,.4),rgba(50,12,20,.6))';
+      if(!card.querySelector('.am-err')){
+        const fb=document.createElement('div');
+        fb.className='am-err';
+        fb.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;';
+        fb.innerHTML=`<span style="font-size:1.6rem;opacity:.3">🖼️</span><span style="font-size:.55rem;letter-spacing:.2em;color:rgba(201,168,76,.3);">${p.caption}</span>`;
+        card.appendChild(fb);
+      }
+    };
+    // Stagger load to avoid hammering GitHub (50ms per image)
+    setTimeout(()=>{ img.src=p.url; }, i*50);
+
+    const ov=document.createElement('div');
+    ov.className='am-card-overlay';
+    ov.innerHTML=`<p class="am-card-caption">${p.caption}</p><p style="font-size:.58rem;letter-spacing:.2em;color:rgba(201,168,76,.5);margin-top:.15rem;">${catName(p.cat)}</p>`;
+
+    card.appendChild(img);
+    card.appendChild(ov);
+    card.addEventListener('click',()=>openLightbox(filtered,i));
+    grid.insertBefore(card,empty);
+  });
+}
+
+// ── Lightbox ──────────────────────────────────
+function openLightbox(photos,i){
+  lbPhotos=photos; lbIndex=i;
+  document.getElementById('lightbox').classList.add('open');
+  showLbPhoto();
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
+function showLbPhoto(){
+  const p=lbPhotos[lbIndex];
+  const img=document.getElementById('lb-img');
+  img.style.opacity='0';
+  img.crossOrigin='anonymous';
+  img.onload=()=>{img.style.transition='opacity .5s';img.style.opacity='1';};
+  img.onerror=()=>{img.style.opacity='.15';};
+  img.src=p.url+'?t='+Date.now(); // cache-bust to force re-fetch with crossOrigin
+  document.getElementById('lb-caption').textContent=p.caption;
+  document.getElementById('lb-counter').textContent=`${lbIndex+1} / ${lbPhotos.length}`;
+}
+function lbNav(d){lbIndex=(lbIndex+d+lbPhotos.length)%lbPhotos.length;showLbPhoto();}
+document.addEventListener('keydown',e=>{
+  if(document.getElementById('lightbox').classList.contains('open')){
+    if(e.key==='ArrowRight')lbNav(1);
+    if(e.key==='ArrowLeft') lbNav(-1);
+    if(e.key==='Escape')    closeLightbox();
+  } else if(document.getElementById('album-modal').classList.contains('open')&&e.key==='Escape'){
+    closeAlbum();
+  }
+});
+window.addEventListener('load',()=>{
+  setTimeout(()=>document.getElementById('am-count').textContent=ALBUM_PHOTOS.length+' फोटो',2500);
+});
+
+// ═══════════════════════════════════════════════
+// DAILY FRAME
+// ═══════════════════════════════════════════════
+function setDailyFrame(input){
+  if(!input.files[0])return;
+  const url=URL.createObjectURL(input.files[0]);
+  const img=document.getElementById('df-img');
+  img.src=url;img.style.display='block';
+  document.getElementById('df-zone').style.display='none';
+}
+function saveDailyFrame(){
+  const cap=document.getElementById('df-caption').value.trim();
+  if(!document.getElementById('df-img').src){toast('कृपया पहिले फोटो छान्नुहोस्।');return;}
+  toast('✦ फ्रेम सुरक्षित भयो! — "'+( cap||'क्याप्सन छैन')+'"');
+}
+
+// ═══════════════════════════════════════════════
+// BLESSINGS
+// ═══════════════════════════════════════════════
+let blCount=2;
+function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function addBl(){
+  const n=document.getElementById('BLN').value.trim(),t=document.getElementById('BLT').value.trim();
+  if(!n||!t){toast('कृपया नाम र शुभकामना दुवै लेख्नुहोस्।');return;}
+  const g=document.getElementById('BLG'),c=document.createElement('div');
+  c.className='blc';c.innerHTML=`<p class="blcn">${esc(n)}</p><p class="blct">${esc(t)}</p>`;
+  g.insertBefore(c,g.firstChild);
+  document.getElementById('BLN').value='';document.getElementById('BLT').value='';
+  blCount++;document.getElementById('bl-count').textContent=blCount+' शुभकामनाहरू';
+  toast('✦ तपाईंको शुभकामना थपियो!');
+}
+
+// ═══════════════════════════════════════════════
+// QUOTES
+// ═══════════════════════════════════════════════
+const QUOTES=[
+  {t:'सुख भनेको महलमा हुँदैन — मनमिल्ने साथीसँग हुन्छ।',s:'नेपाली लोकोक्ति'},
+  {t:'जहाँ विश्वास छ, त्यहाँ प्रेम छ। जहाँ प्रेम छ, त्यहाँ शान्ति छ।',s:'प्राचीन उक्ति'},
+  {t:'दुई जनाको मिलन नभएसम्म घर बन्दैन — घरमा प्रेम नभएसम्म स्वर्ग बन्दैन।',s:'नेपाली उद्धरण'},
+  {t:'धैर्यले जित्ने मान्छे सधैँ शान्त जीवन पाउँछ।',s:'बुद्ध विचार'},
+  {t:'सँगसँगै हाँस्नु, सँगसँगै रुनु — यही दाम्पत्यको सार हो।',s:'जीवन दर्शन'},
+  {t:'समयले सबै घाउ निको पार्छ, तर माया भएको घरमा घाउ नै पर्दैन।',s:'नेपाली उद्धरण'},
+  {t:'जीवन एउटा यात्रा हो — सही साथी भेटिए भने हरेक बाटो सुन्दर लाग्छ।',s:'जीवन दर्शन'},
+  {t:'घरको आँगनमा खुसी फुलाउन माटो चाहिँदैन — मन चाहिन्छ।',s:'नेपाली लोकोक्ति'},
+  {t:'प्रेम वृक्ष जस्तो हो — हेरचाह गर्यो भने फल दिन्छ, बिर्सियो भने मर्छ।',s:'जीवन दर्शन'},
+  {t:'सँगै बसेर मात्र होइन — सँगै सोचेर दाम्पत्य बन्छ।',s:'नेपाली उद्धरण'},
+  {t:'दुई जनाको एउटै स्वप्न भयो भने त्यो स्वप्न साकार हुन्छ।',s:'जीवन दर्शन'},
+  {t:'इज्जत दिनु र लिनु — यही गृहस्थीको आधार हो।',s:'नेपाली उद्धरण'},
+];
+let qIdx=0;
+function nextQuote(){
+  const txt=document.getElementById('qtxt'),src=document.getElementById('qsrc');
+  txt.classList.add('fade');src.classList.add('fade');
+  setTimeout(()=>{qIdx=(qIdx+1)%QUOTES.length;txt.textContent=QUOTES[qIdx].t;src.textContent='— '+QUOTES[qIdx].s;txt.classList.remove('fade');src.classList.remove('fade');},400);
+}
+function copyQuote(){
+  navigator.clipboard.writeText(QUOTES[qIdx].t).then(()=>{
+    const btn=document.getElementById('qcopy');btn.textContent='✦ कपी भयो!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='प्रतिलिपि गर्नुहोस्';btn.classList.remove('copied');},2000);
+    toast('✦ उद्धरण कपी भयो!');
+  });
+}
+function shareQuote(){document.getElementById('share-overlay').classList.add('open');}
+let currentShareText='';
+function shareVia(via){
+  const txt=QUOTES[qIdx].t+' — '+QUOTES[qIdx].s+'\n\nभवानी र नवराजको विवाह उत्सव';
+  if(via==='whatsapp')window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank');
+  else if(via==='facebook')window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');
+  else{navigator.clipboard.writeText(txt);toast('✦ कपी भयो!');}
+  document.getElementById('share-overlay').classList.remove('open');
+}
+
+// ═══════════════════════════════════════════════
+// WISH BOARD (draggable sticky notes)
+// ═══════════════════════════════════════════════
+const STICKY_COLORS=['#F5D76E','#F0A500','#E8A0BF','#A8D8EA','#B5EAD7','#FFDAC1'];
+let selColor=STICKY_COLORS[0];
+// Build color picker
+(()=>{
+  const cp=document.getElementById('wbcolors');
+  STICKY_COLORS.forEach((c,i)=>{
+    const btn=document.createElement('div');btn.className='wb-clr'+(i===0?' sel':'');
+    btn.style.background=c;
+    btn.onclick=()=>{selColor=c;document.querySelectorAll('.wb-clr').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');};
+    cp.appendChild(btn);
+  });
+})();
+
+// Pre-populate 3 stickies
+const defaultStickies=[
+  {text:'भवानी र नवराजलाई विवाहको हार्दिक शुभकामना! 🎉',author:'शुभकामना',color:'#F5D76E',x:40,y:60},
+  {text:'सदा सुखी रहनुहोस्। तपाईंहरूको माया अनन्त होस्।',author:'आशीर्वाद',color:'#B5EAD7',x:260,y:130},
+  {text:'जीवनभर सँगसँगै! Happy Married Life! 💍',author:'प्रेमसहित',color:'#E8A0BF',x:480,y:50},
+];
+window.addEventListener('load',()=>{setTimeout(()=>{defaultStickies.forEach(s=>createSticky(s.text,s.author,s.color,s.x,s.y));},2400);});
+
+function addSticky(){
+  const n=prompt('तपाईंको नाम:','');
+  if(n===null)return;
+  const t=prompt('नोटमा के लेख्नुहुन्छ?','');
+  if(!t)return;
+  const canvas=document.getElementById('wbcanvas');
+  const maxX=Math.max(10,canvas.offsetWidth-200);
+  const maxY=Math.max(10,canvas.offsetHeight-160);
+  createSticky(t,n||'अज्ञात',selColor,Math.random()*maxX,Math.random()*maxY);
+  toast('✦ नोट थपियो!');
+}
+
+function createSticky(text,author,color,x,y){
+  const canvas=document.getElementById('wbcanvas');
+  const el=document.createElement('div');el.className='sticky';
+  el.style.cssText=`left:${x}px;top:${y}px;background:${color};transform:rotate(${(Math.random()-.5)*4}deg);`;
+  el.innerHTML=`<button class="sticky-del" onclick="this.parentElement.remove();toast('✦ नोट हटाइयो।')">✕</button><div class="sticky-author">${esc(author||'')}</div><textarea class="sticky-body">${esc(text)}</textarea>`;
+  makeDraggable(el);
+  canvas.appendChild(el);
+}
+
+function makeDraggable(el){
+  let ox=0,oy=0,isDrag=false;
+  el.addEventListener('mousedown',e=>{
+    if(e.target.tagName==='BUTTON'||e.target.tagName==='TEXTAREA')return;
+    isDrag=true;ox=e.clientX-el.offsetLeft;oy=e.clientY-el.offsetTop;
+    el.classList.add('drag');el.style.zIndex=Date.now();
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove',e=>{if(!isDrag)return;el.style.left=(e.clientX-ox)+'px';el.style.top=(e.clientY-oy)+'px';});
+  document.addEventListener('mouseup',()=>{isDrag=false;el.classList.remove('drag');});
+  // Touch
+  el.addEventListener('touchstart',e=>{
+    if(e.target.tagName==='BUTTON'||e.target.tagName==='TEXTAREA')return;
+    const t=e.touches[0];ox=t.clientX-el.offsetLeft;oy=t.clientY-el.offsetTop;isDrag=true;
+    el.style.zIndex=Date.now();e.preventDefault();
+  },{passive:false});
+  document.addEventListener('touchmove',e=>{if(!isDrag)return;const t=e.touches[0];el.style.left=(t.clientX-ox)+'px';el.style.top=(t.clientY-oy)+'px';},{passive:false});
+  document.addEventListener('touchend',()=>{isDrag=false;});
+}
+
+// ═══════════════════════════════════════════════
+// LETTER → GMAIL
+// ═══════════════════════════════════════════════
+function sendL(){
+  const fr=document.getElementById('LFR').value.trim();
+  const sb=document.getElementById('LSB').value.trim();
+  const bd=document.getElementById('LBD').value.trim();
+  if(!fr||!bd){toast('कृपया नाम र सन्देश दुवै लेख्नुहोस्।');return;}
+  // ══════════════════════════════════════════════════════
+  // ✎ GMAIL ADDRESS — set either bride's or groom's Gmail:
+  //   Bride  → bhawani's Gmail address here
+  //   Groom  → nawaraj's Gmail address here
+  //   Replace the value below with the actual Gmail address.
+  // ══════════════════════════════════════════════════════
+  const to = 'BRIDE_OR_GROOM_GMAIL@gmail.com'; // ← यहाँ भवानी वा नवराजको Gmail राख्नुहोस्
+  const su=encodeURIComponent(sb||`${fr}को तर्फबाट — भवानी र नवराजलाई 💝`);
+  const msg=encodeURIComponent(`प्रिय भवानी र नवराज,\n\n${bd}\n\nमायासहित,\n${fr}`);
+  window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${msg}`,'_blank');
+  toast('✦ Gmail खुल्दैछ...');
+}
+
+// ═══════════════════════════════════════════════
+// MELODY MUSIC — real pentatonic lullaby loop
+// ═══════════════════════════════════════════════
+let audioCtx=null, musicPlaying=false, melodyTimeout=null, padNodes=[];
+
+// Pentatonic scale in C (Hz): C4 D4 E4 G4 A4 C5 D5 E5 G5
+const SCALE = [261.63,293.66,329.63,392.00,440.00,523.25,587.33,659.25,783.99];
+
+// Melody sequence — note indices into SCALE + duration (beats)
+const MELODY = [
+  [4,1],[6,1],[7,0.5],[6,0.5],[4,1],[2,1],
+  [0,0.5],[2,0.5],[4,1],[6,1],[7,2],
+  [6,1],[4,1],[2,0.5],[4,0.5],[6,1],[7,1],
+  [4,0.5],[2,0.5],[0,1],[2,1],[4,3],
+  [7,1],[6,1],[4,1],[2,0.5],[0,0.5],
+  [2,1],[4,1],[6,1],[7,0.5],[6,0.5],[4,2],
+  [0,1],[2,1],[4,0.5],[6,0.5],[7,1],[6,1],[4,3],
+];
+
+const BPM   = 58;       // slow, romantic
+const BEAT  = 60/BPM;   // seconds per beat
+
+function makeNote(ctx, freq, startTime, dur, vol){
+  const osc   = ctx.createOscillator();
+  const gain  = ctx.createGain();
+  const rev   = ctx.createConvolver();  // tiny reverb via delay trick
+  const delay = ctx.createDelay(0.5);
+  const dGain = ctx.createGain();
+
+  osc.type = 'sine';
+  osc.frequency.value = freq;
+
+  // Soft attack, long release
+  gain.gain.setValueAtTime(0, startTime);
+  gain.gain.linearRampToValueAtTime(vol, startTime + 0.06);
+  gain.gain.setValueAtTime(vol, startTime + dur * 0.6);
+  gain.gain.exponentialRampToValueAtTime(0.0001, startTime + dur * 1.8);
+
+  // Echo/reverb via delay
+  delay.delayTime.value = 0.32;
+  dGain.gain.value = 0.18;
+
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+  gain.connect(delay);
+  delay.connect(dGain);
+  dGain.connect(ctx.destination);
+
+  osc.start(startTime);
+  osc.stop(startTime + dur * 2.5);
+  return osc;
+}
+
+function makePad(ctx){
+  // Warm pad chord (C major) — sustained background
+  const chordFreqs = [130.81,164.81,196.00,261.63]; // C3 E3 G3 C4
+  chordFreqs.forEach(f=>{
+    const osc  = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.value = f;
+    gain.gain.setValueAtTime(0, ctx.currentTime);
+    gain.gain.linearRampToValueAtTime(0.018, ctx.currentTime + 3);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    padNodes.push(osc, gain);
+  });
+}
+
+function scheduleMelody(ctx, startTime){
+  let t = startTime;
+  const scheduled = [];
+  MELODY.forEach(([idx, beats])=>{
+    const freq = SCALE[idx];
+    const dur  = beats * BEAT;
+    const node = makeNote(ctx, freq, t, dur, 0.22);
+    scheduled.push(node);
+    t += dur * 0.95; // slight overlap for legato feel
+  });
+  // Loop: schedule next pass slightly before this one ends
+  const loopDur = t - startTime;
+  melodyTimeout = setTimeout(()=>{
+    if(musicPlaying) scheduleMelody(ctx, ctx.currentTime + 0.1);
+  }, (loopDur - 0.5) * 1000);
+  return scheduled;
+}
+
+function toggleMusic(){
+  if(!audioCtx) audioCtx = new(window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==='suspended') audioCtx.resume();
+
+  if(musicPlaying){
+    // Stop everything
+    clearTimeout(melodyTimeout);
+    padNodes.forEach(n=>{ try{ n.stop ? n.stop() : n.gain.setValueAtTime(0,audioCtx.currentTime); }catch(e){} });
+    padNodes = [];
+    musicPlaying = false;
+    document.getElementById('mpbtn').textContent = '▶';
+    document.querySelectorAll('.mp-bar').forEach(b=>b.classList.remove('playing'));
+    toast('♪ संगीत बन्द भयो।');
+  } else {
+    makePad(audioCtx);
+    scheduleMelody(audioCtx, audioCtx.currentTime + 0.3);
+    musicPlaying = true;
+    document.getElementById('mpbtn').textContent = '⏸';
+    document.querySelectorAll('.mp-bar').forEach(b=>b.classList.add('playing'));
+    toast('♪ संगीत सुरु भयो — 🎵');
+  }
+}
+</script>
+</body>
+</html>
